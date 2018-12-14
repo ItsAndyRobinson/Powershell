@@ -1,0 +1,2 @@
+	net group /domain | Select-String -Pattern BI_ | foreach { $_ -replace '^.' } | foreach {net group $_ /domain}
+  
